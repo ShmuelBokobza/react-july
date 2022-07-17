@@ -1,15 +1,24 @@
 import ExpenseItem from "./ExpenseItem";
+import ExpensesFilter from "./ExpensesFilter";
 import Card from "../UI/Card";
 import "./Expenses.css";
 
 const Expenses = (props) => {
+  console.log(props.items);
   return (
     <Card className="expenses">
-      <ExpenseItem
-        date={props.items.date}
-        title={props.items.title}
-        amount={props.items.amount}
-      ></ExpenseItem>
+      <ExpensesFilter />
+
+      {props.items.map((items) => {
+        return (
+          <ExpenseItem
+            key={items.id}
+            date={items.date}
+            title={items.title}
+            amount={items.amount}
+          ></ExpenseItem>
+        );
+      })}
     </Card>
   );
 };

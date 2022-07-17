@@ -32,9 +32,7 @@ function App() {
   return (
     <div>
       <NewExpense onFormSubmit={addExpenseHandler} />
-      {expenses.map((expense) => {
-        return <Expenses key={expense.id} items={expense} />;
-      })}
+      <Expenses items={expenses} />;
     </div>
   );
 }

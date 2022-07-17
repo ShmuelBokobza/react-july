@@ -6,9 +6,9 @@ const Expenses = (props) => {
   return (
     <Card className="expenses">
       <ExpenseItem
-        date={props.items[0].date}
-        title={props.items[0].title}
-        amount={props.items[0].amount}
+        date={props.items.date}
+        title={props.items.title}
+        amount={props.items.amount}
       ></ExpenseItem>
     </Card>
   );

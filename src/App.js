@@ -24,9 +24,14 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseHandler = (expenseDataAdded) => {
+    console.log(expenseDataAdded);
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onFormSubmit={addExpenseHandler} />
       {expenses.map((expense) => {
         return <Expenses key={expense.id} items={expense} />;
       })}

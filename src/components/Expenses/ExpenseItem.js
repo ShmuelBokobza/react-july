@@ -8,19 +8,18 @@ const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.title);
   const [amount, setAmount] = useState(props.amount);
 
-  const clickHandler = () => {
-    setTitle("fef");
-    console.log(title);
-  };
+  const clickHandler = () => {};
   return (
-    <Card className="expense-item">
-      <ExpenseDate date={date} />
-      <div className="expense-item__description">
-        <h2>{title}</h2>
-      </div>
-      <div className="expense-item__price">{amount}€</div>
-      <button onClick={clickHandler}>Change Title</button>
-    </Card>
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate date={date} />
+        <div className="expense-item__description">
+          <h2>{title}</h2>
+        </div>
+        <div className="expense-item__price">{amount}€</div>
+        {/* <button onClick={clickHandler}>Change Title</button> */}
+      </Card>
+    </li>
   );
 };
 
